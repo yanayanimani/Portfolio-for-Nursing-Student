@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JB – My Skills</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('Biography.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-color: #1a0a2e;
+      min-height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 0, 30, 0.60);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 100, 200, 0.2);
+    }
+
+    .nav__content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ff6ec7;
+      font-family: 'Arial Black', Arial, sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 12px rgba(255, 110, 199, 0.6);
+      transition: text-shadow 0.3s;
+    }
+
+    .logo:hover {
+      text-shadow: 0 0 24px rgba(255, 110, 199, 1);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      padding: 0.4rem 1rem;
+      border: 2px solid transparent;
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+      font-size: 1rem;
+      transition: 0.3s;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover {
+      border-top-color: #ff6ec7;
+      border-bottom-color: #ff6ec7;
+      color: #ff6ec7;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 8rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .page-content h1 {
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: 2.2rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      margin-bottom: 0.8rem;
+    }
+
+    .page-content > p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      margin-bottom: 3rem;
+    }
+
+    .skill-block {
+      margin-bottom: 4rem;
+    }
+
+    .skill-block img {
+      width: 320px;
+      max-width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid rgba(255, 110, 199, 0.45);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      display: block;
+      margin: 0 auto 1.2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-block img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 40px rgba(255, 110, 199, 0.4);
+    }
+
+    .skill-block h2 {
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: 2rem;
+      color: #ff6ec7;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    .skill-block p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.88);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      margin-bottom: 0.6rem;
+    }
+
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid rgba(255, 110, 199, 0.2);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav__content">
+      <a href="home.html" class="logo"></a>
+      <ul>
+        <li><a href="mypage.html">Home</a></li>
+        <li><a href="aboutme.html">Biography</a></li>
+        <li><a href="myskills.html">My Skills</a></li>
+        <li><a href="https://www.facebook.com/jb.nepomuceno.12" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <h1>WELCOME TO MY SKILLS PAGE!</h1>
+    <p>Here are some of the things I'm good at — skills I've picked up through school, experience, and just living life.</p>
+
+    <div class="skill-block">
+      <img src="imagesjb/patient.jpg" alt="Patient Care" />
+      <h2>PATIENT CARE</h2>
+      <p>As a nursing student, patient care is at the heart of everything I do.</p>
+      <p>I've learned how to assess, listen, and respond to patients with compassion and calm — even in stressful situations. Nursing school has trained me to think critically and act with care.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="skill-block">
+      <img src="imagesjb/sports.jpg" alt="Sports" />
+      <h2>SPORTS</h2>
+      <p>I've always been into sports whether it's basketball, cycling, or badminton. What I love the most is BASKETBALL.</p>
+      <p>Hangout with my friends and having fun to play sports is my thing.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="skill-block">
+      <img src="imagesjb/adv.jpg" alt="Adventure" />
+      <h2>ADVENTURE</h2>
+      <p>Having fun outside really heals me. The good thing of being an adventurous person is getting able to see the beautiful world.</p>
+      <p>Getting out of my comfort zone like being and adventurous helps me process things — it's both a skill and a hobby for me.</p>
+    </div>
+
+
+  <footer>
+  </footer>
+
+</body>
+</html>

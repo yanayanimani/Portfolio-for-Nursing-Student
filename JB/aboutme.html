@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JB – Biography</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('Biography.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-color: #1a0a2e;
+      min-height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 0, 30, 0.60);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 100, 200, 0.2);
+    }
+
+    .nav__content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ff6ec7;
+      font-family: 'Arial Black', Arial, sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 12px rgba(255, 110, 199, 0.6);
+      transition: text-shadow 0.3s;
+    }
+
+    .logo:hover {
+      text-shadow: 0 0 24px rgba(255, 110, 199, 1);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      padding: 0.4rem 1rem;
+      border: 2px solid transparent;
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+      font-size: 1rem;
+      transition: 0.3s;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover {
+      border-top-color: #ff6ec7;
+      border-bottom-color: #ff6ec7;
+      color: #ff6ec7;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 8rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .page-content h1 {
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: 2.4rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      margin-bottom: 0.4rem;
+    }
+
+    .page-content h2 {
+      font-family: 'Courier New', monospace;
+      font-size: 2rem;
+      color: #ff6ec7;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      margin-bottom: 2rem;
+      letter-spacing: 0.3em;
+    }
+
+    .bio-img img {
+      border-radius: 50%;
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border: 4px solid #ff6ec7;
+      box-shadow: 0 0 30px rgba(255, 110, 199, 0.5);
+      margin: 0 auto 2rem;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .bio-img img:hover {
+      transform: scale(1.04);
+    }
+
+    .bio-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      margin-bottom: 1rem;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: #ff6ec7;
+      margin: 2rem auto;
+      border-radius: 2px;
+      opacity: 0.7;
+    }
+
+    .pet-section {
+      margin-top: 3rem;
+    }
+
+    .pet-section h3 {
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: 1.6rem;
+      color: #ff6ec7;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+      margin-bottom: 1.2rem;
+    }
+
+    .pet-section img {
+      border-radius: 16px;
+      width: 340px;
+      max-width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border: 3px solid rgba(255, 110, 199, 0.5);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pet-section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.85);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      margin-bottom: 0.8rem;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid rgba(255, 110, 199, 0.2);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav__content">
+      <a href="home.html" class="logo"></a>
+      <ul>
+        <li><a href="mypage.html">Home</a></li>
+        <li><a href="aboutme.html">Biography</a></li>
+        <li><a href="myskills.html">My Skills</a></li>
+        <li><a href="https://www.facebook.com/jb.nepomuceno.12" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <h1>ABOUT ME</h1>
+
+    <div class="bio-img">
+      <img src="imagesjb/sleep.jpg" alt="Photo of JB" />
+    </div>
+
+    <div class="bio-text">
+      <p>I'm John Benedict Nepomuceno, 20 years old and currently pursuing a Bachelor of Science in Nursing. </p>
+      <p>Outside the school and lecture rooms, you'll find me obsessing over cars and motorcycles — anything with an engine that gets my full attention.</p>
+      <p>I'm the kind of person who stays curious, stays moving, and never runs out of things to be excited about.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="pet-section">
+      <h2>A Little More About Me</h2>
+      <img src="imagesjb/pets.jpg" alt="My hobby photo" />
+      <p>I used to have an animal pet such as chickens, cats, and dogs.</p>
+      <p>Same thing I love my pets as much as I care to my patients.</p>
+      <p>I really love taking care of them, buying some treats, and having quality time together.</p>
+    </div>
+
+  </div>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
